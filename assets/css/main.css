@@ -1,0 +1,8 @@
+body              { background-image: url("../img/bg.png");}
+.discord > :hover { color: rgb(65, 105, 225);}
+.vk > :hover      { color: rgb(67 154 247);}
+.github > :hover  { color: rgb(0, 0, 0);}
+.telegram > :hover{ color: rgb(11, 136, 204);}
+span.rules        { font-weight: bold;}
+.online-text      { font-weight: bold;}
+.offline          { font-weight: bold; color: red;}
