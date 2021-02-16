@@ -1,4 +1,4 @@
-var ip = "dreamnw.ru";
+var ip = "lastn.dj";
 var max = 500;
 let online_num;
 let online_bar;
