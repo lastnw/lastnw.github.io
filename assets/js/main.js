@@ -4,6 +4,7 @@ var params = fetchParams();
 
 $(function load() {
   loadModal(params);
+  loadMonitor();
   loadDiscount();
 });
 

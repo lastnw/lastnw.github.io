@@ -33,6 +33,7 @@
     <script type="text/javascript" src="/assets/js/main.js"></script>
   </head>
   <body>
+    <!--- Header-NavBar --->
     <header class="navbar navbar-expand-md navbar-light bg-light bd-navbar">
       <nav class="container-xxl flex-wrap flex-md-nowrap">
         <a class="navbar-brand p-0 me-2" href="#">LastNetwork</a>
@@ -78,6 +79,23 @@
         </div>
       </nav>
     </header>
+
+    <div class="card mb-3 p-1 mt-4 rounded mx-auto" style="max-width: 40rem;">
+      <div class="card-body text-center">
+        <hr>
+        <h5 class="card-title text-dark text-center">Информация</h5>
+        <hr>
+        <div class="card mb-3 p-3 mt-4 rounded mx-auto border-danger text-center text-dark" id="online-card" style="max-width: 20rem;">
+          <h5 class="card-title">Статус сервера</h5>
+          <hr>
+          <h3 id="online-num" class="text-danger">OFFLINE</h3>
+          <hr>
+          <div class="progress" style="height: 20px;">
+            <div id="online-bar" class="progress-bar bg-danger" role="progressbar" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!---div class="rounded col-xl-9 px-0">
       <div class="mx-auto py-4" id="vk_groups" style="width: 688px; height: 1203px; background: none;"></div>
@@ -220,5 +238,12 @@
         </div>
       </div>
     </form>
+
+    <!--- Footer --->
+    <footer class="bg-light text-center text-lg-start">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        2021 © LastNetwork
+      </div>
+    </footer>
   </body>
 </html>
