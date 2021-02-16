@@ -1,4 +1,4 @@
-var ip = "hypixel.net";
+var ip = "dreamnw.ru";
 var max = 500;
 let online_num;
 let online_bar;
