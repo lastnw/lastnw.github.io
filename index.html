@@ -13,7 +13,6 @@
 	  <meta name="og:url" content="https://lastnetwork.ru">
 	  <meta name="theme-color" content="#4db8ff">
 	  <meta id="site-description" name="og:description" content="">
-
     <!--- Main Info --->
     <title>LastNetwork | Главная страница</title>
     <!---link rel="icon" href="/assets/img/icon.png"--->
@@ -24,9 +23,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
     <script type="text/javascript" src="/assets/js/donate.js"></script>
     <script type="text/javascript" src="/assets/js/modals.js"></script>
     <script type="text/javascript" src="/assets/js/monitoring.js"></script>
@@ -83,10 +83,10 @@
     <div class="card mb-3 p-1 mt-4 rounded mx-auto" style="max-width: 40rem;">
       <div class="card-body text-center">
         <hr>
-        <h5 class="card-title text-dark text-center">Информация</h5>
+        <h5 class="card-title text-dark text-center">Статус сервера</h5>
         <hr>
         <div class="card mb-3 p-3 mt-4 rounded mx-auto border-danger text-center text-dark" id="online-card" style="max-width: 20rem;">
-          <h5 class="card-title">Статус сервера</h5>
+          <button class="btn" onclick="copyIp();"><h5 id="copy-ip">Скопировать IP</h5></button>
           <hr>
           <h3 id="online-num" class="text-danger">OFFLINE</h3>
           <hr>
@@ -94,14 +94,20 @@
             <div id="online-bar" class="progress-bar bg-danger" role="progressbar" style="width: 0%;"></div>
           </div>
         </div>
+        <hr>
+        <h5 class="card-title text-dark text-center">Новости VK</h5>
+        <hr>
+        <div class="card mb-3 p-3 mt-4 rounded mx-auto border-primary text-center text-dark" style="max-width: 40rem;">
+          <div id="vk_groups"></div>
+          <script type="text/javascript">
+            VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, height: "900", width: "auto"}, 202568327);
+          </script>
+        </div>
       </div>
     </div>
 
     <!---div class="rounded col-xl-9 px-0">
-      <div class="mx-auto py-4" id="vk_groups" style="width: 688px; height: 1203px; background: none;"></div>
-      <script type="text/javascript">
-        VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, height: "1000", width: "auto"}, 202568327);
-      </script>
+
     </div-->
 
     <!--- Rules Modal --->

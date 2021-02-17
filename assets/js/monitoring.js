@@ -1,5 +1,5 @@
-var ip = "hypixel.net";
-var max = 500000;
+var ip = "dreamnw.ru";
+var max = 250;
 let online_num;
 let online_bar;
 let online_card;

@@ -17,3 +17,18 @@ function fetchParams() {
   }
   return params;
 }
+
+function copy(text) {
+  var el = document.createElement("input");
+  el.value = text;
+  document.body.append(el);
+  el.select();
+  document.execCommand("copy");
+  el.remove();
+}
+
+function copyIp() {
+  copy("lastnetwork.ru");
+  document.getElementById('copy-ip').innerHTML = "IP Скопирован!";
+  setTimeout(() => {document.getElementById('copy-ip').innerHTML = "Скопировать IP";}, 2500);
+}

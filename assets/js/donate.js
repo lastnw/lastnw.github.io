@@ -1,6 +1,6 @@
   var discount = 15;
   var description = "В честь дня всех вюблённых дарим скидку %discount%%!";
-
+  var time = 1613581788792 + mathTime(0, 0, 2);
   function changeName(i) {
     var name = document.getElementById('name');
 
@@ -96,7 +96,12 @@
   }
 
   function hasDiscount() {
-    return discount > 0;
+    if (discount > 0){
+      if(time != 0 && time < new Date().getTime())
+        return false;
+      return true;
+    }
+    return false;
   }
 
   function sumToDiscounted(sum) {
@@ -110,10 +115,14 @@
   function loadDiscount() {
     if (!hasDiscount())
       return;
-    document.getElementById("donate-toggle").innerHTML = "Пополнение (скидка<a style='color: #198754; font-weight: bold;'> " + discount + "%</a>)"
+    document.getElementById("donate-toggle").innerHTML = "Пополнение (<a style='color: #dc3545; font-weight: bold;'>-</a><a style='color: #198754; font-weight: bold;'>" + discount + "%</a>)"
     var element = document.createElement("div");
     element.innerHTML = "<a style='color: #198754;'>" + description.replace("%discount%", discount) + "</a>";
     element.id = "discount-description";
     document.getElementById("desc").append(element);
     document.getElementById("desc").append(document.createElement("hr"));
+  }
+
+  function mathTime(days, hours, minutes) {
+    return days * 864e+5 + hours * 36e+5 + minutes * 6e+4;
   }
