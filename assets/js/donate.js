@@ -1,6 +1,6 @@
   var discount = 15;
   var description = "В честь дня всех вюблённых дарим скидку %discount%%!";
-  var time = 1613581788792 + mathTime(0, 0, 2);
+  var time = 1613581788792 + mathTime(5, 0, 2);
   function changeName(i) {
     var name = document.getElementById('name');
 
