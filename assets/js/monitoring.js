@@ -1,5 +1,5 @@
-var ip = "lastn.dj";
-var max = 500;
+var ip = "hypixel.net";
+var max = 500000;
 let online_num;
 let online_bar;
 let online_card;
